@@ -11,8 +11,10 @@ const path = require('path');
 const { FileSystemWallet, X509WalletMixin } = require('fabric-network');
 
 // Location of the crypto for the dev environment
-const CRYPTO_CONFIG = path.resolve(__dirname, '../../../network/crypto/crypto-config');
+const CRYPTO_CONFIG = path.resolve(__dirname, 'crypto-config');
 const CRYPTO_CONFIG_PEER_ORGS = path.join(CRYPTO_CONFIG, 'peerOrganizations')
+
+
 
 // Folder for creating the wallet - All identities written under this
 const WALLET_FOLDER = './user-wallet'

@@ -11,7 +11,7 @@ const CONNECTION_PROFILE_PATH = '../profiles/dev-connection.yaml'
 const ACME_CLIENT_CONNECTION_PROFILE_PATH = '../profiles/acme-client.yaml'
 const BUDGET_CLIENT_CONNECTION_PROFILE_PATH = '../profiles/budget-client.yaml'
 
-const CRYPTO_CONFIG_PEER_ORGANIZATIONS ='../../../network/crypto/crypto-config/peerOrganizations'
+const CRYPTO_CONFIG_PEER_ORGANIZATIONS ='../crypto-config/peerOrganizations'
 
 const    client = Client.loadFromConfig(CONNECTION_PROFILE_PATH)
 

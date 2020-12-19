@@ -12,6 +12,7 @@
     "fabric-client": "^1.4.0",
     "fabric-network": "^1.4.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pkcs11js": "^1.2.0"
   }
 }

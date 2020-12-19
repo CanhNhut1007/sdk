@@ -10,16 +10,15 @@ const yaml = require('js-yaml');
 const { Gateway, FileSystemWallet, DefaultEventHandlerStrategies, Transaction  } = require('fabric-network');
 
 // Constants for profile
-const CONNECTION_PROFILE_PATH = '../profiles/dev-connection.yaml'
+const CONNECTION_PROFILE_PATH = 'profiles/dev-connection.yaml'
 // Path to the wallet
 const FILESYSTEM_WALLET_PATH = './user-wallet'
 // Identity context used
-const USER_ID = 'Admin@acme.com'
+const USER_ID = 'User1@acme.com'
 // Channel name
 const NETWORK_NAME = 'airlinechannel'
 // Chaincode
 const CONTRACT_ID = "erc20"
-
 
 
 // 1. Create an instance of the gatway
@@ -38,11 +37,11 @@ async function main() {
 
     // 3. Get the network
     let network = await gateway.getNetwork(NETWORK_NAME)
-    // console.log(network)
+    console.log(network)
 
        // 5. Get the contract
     const contract = await network.getContract(CONTRACT_ID);
-    // console.log(contract)
+    console.log(contract)
 
     // 6. Query the chaincode
     await queryContract(contract)
@@ -101,9 +100,9 @@ async function setupGateway() {
         wallet: wallet,
         discovery: { enabled: false, asLocalhost: true }
         /*** Uncomment lines below to disable commit listener on submit ****/
-        // , eventHandlerOptions: {
-        //     strategy: null
-        // } 
+        , eventHandlerOptions: {
+             strategy: null
+        } 
     }
 
     // 2.4 Connect gateway to the network
